@@ -1,6 +1,6 @@
 ﻿const Discord = require('discord.js');
 const devs = ['568244115326763011'];
-const premium = ['513326455833231371']
+const premium = ['570407650114666517']
 const client = new Discord.Client();
 const db = require('quick.db');
 const bot = new Discord.Client();
@@ -36,7 +36,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'@Zee5#2700 help','Type @Zee5#2700 help',`${client.users.size} Members`,'@Zee5#2700 invite','By: Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,'@Robert J.Shelby#8899  ','Type @Robert J.Shelby#8899  help',`${client.users.size} Members`,'@Robert J.Shelby#8899  invite','By: Robert | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -69,8 +69,7 @@ client.on("message", message=>{
 ╱╱╰╯╰━━┻╯╰━━┻━━┻━━━┻━━┻━╯
 **
 TurboBot. a multi purpose bot developed by ! Baro𝐍#5969.
-To see all the bot commands check our website | لرؤية جميع اوامر البوت الرجاء التوجه الى موقعنا:
- https://stoic-lovelace-e66071.netlify.com/ **
+To see all the bot commands check our website | لرؤية جميع اوامر البوت الرجاء التوجه الى موقعنا: **
 .`)
 message.author.send(`
 **Public commands | الأوامر العامة**
