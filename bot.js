@@ -64,16 +64,16 @@ client.on("message", message=>{
 
 **
 EvilBot. a multi purpose bot developed by Robert J.Shelby#8899
-  _____       _ _ 
- | ____|_   _(_) |
- |  _| \ \ / / | |
- | |___ \ V /| | |
- |_____| \_/ |_|_|
+ 
 
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { //DiamondCodes - [ X_KillerYT ]
     let pages = [`
-***__وصف عن البوت__***
+*** __ _____       _ _ 
+    | ____|_   _(_) |
+    |  _| \ \ / / | |
+    | |___ \ V /| | |
+    |_____| \_/ |_|_|__***
 **
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل قرابة 24 ساعة
