@@ -63,7 +63,12 @@ client.on("message", message=>{
         message.author.send(`
 
 **
-TurboBot. a multi purpose bot developed by Robert J.Shelby#8899
+EvilBot. a multi purpose bot developed by Robert J.Shelby#8899
+  _____       _ _ 
+ | ____|_   _(_) |
+ |  _| \ \ / / | |
+ | |___ \ V /| | |
+ |_____| \_/ |_|_|
 
 To see all the bot commands check our website | لرؤية جميع اوامر البوت الرجاء التوجه الى موقعنا:
  https://stoic-lovelace-e66071.netlify.com/ **
