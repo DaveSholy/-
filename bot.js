@@ -721,7 +721,7 @@ client.on("message", message => {
     }
       });
 client.on('message', message=>{
-    if(message.content.startsWith(prefix+"userinfo")) {
+    if(message.content.startsWith(prefix+"user")) {
     if(!message.channel.guild) return;
     let uinfo = message.mentions.users.first() || message.author 
 if(uinfo.bot) {
@@ -4336,7 +4336,7 @@ client.on('message',async message => {
   });;
 client.on('message', message => {
 
-    if(message.content.startsWith(prefix + '2id')) {
+    if(message.content.startsWith(prefix + 'profile')) {
 if(!message.channel.guild) return;
       var args = message.content.split(" ").slice(1);
       let user = message.mentions.users.first();
@@ -5036,7 +5036,7 @@ client.on('message',async message => {
       let iLD = new Discord.RichEmbed()
       .setAuthor(message.author.username, message.author.avatarURL)
       .setDescription(client.users.filter(f => f.discriminator === tag).map(r => r.username).slice(0, 10).join('\n'))
-      .setFooter('By: xYouseeF\'₁₁ || Roýale.#0001');
+      .setFooter(' ');
       message.channel.send(iLD);
     } else if(!args[1]) {
       tag = message.author.discriminator;
@@ -5053,12 +5053,28 @@ client.on('message', message => {
 if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith(prefix+'users')){
- if(!message.author.id === '437892991047434241') return;
+ if(!message.author.id === '568244115326763011') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
 }
 });
+
+
+client.on("message", message => {
+
+            if (message.content.startsWith(prefix + "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' '); 
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {//حقوق دايموند كودز
+ m.send(`${argresult}\n ${m}`);
+})
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+ message.delete(); 
+};     
+});
+
 
 client.login(process.env.BOT_TOKEN);
