@@ -70,64 +70,102 @@ EvilBot. a multi purpose bot developed by Robert J.Shelby#8899
  | |___ \ V /| | |
  |_____| \_/ |_|_|
 
-To see all the bot commands check our website | لرؤية جميع اوامر البوت الرجاء التوجه الى موقعنا:
- https://stoic-lovelace-e66071.netlify.com/ **
-.`)
-message.author.send(`
-**Public commands | الأوامر العامة**
-『** bots **/لعرض جميع البوتات الي بالسيرفر』
-『** serverinfo** /يعرض لك معلومات عن السيرفر』
-『** botinfo **/يعرض لك كل معلومات البوت』
-『** count **/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
-『** invites **/ يعرض لك  عدد انفايتاتك بالسيرفر 』
-『** للتقديم على رتبة ادارة فى سيرفركم /  تقديم**』
-『** invite-codes **/يعرض لك روابط الانفايتات حكك في السيرفر 』
-『** cal **/اله حاسبة』
-『** translate <language> <any thing> **/يترجم لك الي تبيه من اي لغة』
-『** short **/يختصر لك رابط كبير الى رابط صغير』
-『** tag **/يكتب لك الكلمة بشكل جميل وكبير』
-『** google **/للبحث في قوقل عن طريق الدسكورد』
-『** perms **/يعرض لك برمشناتك بالسيرفر』
-『** z5rf **/يزخرف لك كلمة او جملة 』
-『** rooms **/يعرض لك كل الرومات الي بالسيرفر مع عددها』
-『** emojilist **/يعرض لك كل الايموجيات الي بالسيرفر』
-『** say **/يكرر الكلام الي تكتبو』
-『** image **/صورة السيرفر』
-『** members **/عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
-『** id **/معلومات عنك』
-『** y colors **/ لعرض الالوان』
-『** color <number> **/ لتعير لونك』
-『** bans **/ عدد الاشخاص المبندة 』
-『** avatar **/صورتك او صورة الي تمنشنو』
-『** emoji <any things> **/لتحويل اي كلمه تقولها الي ايموجي』
-『** invite **/لدعوة البوت الى سيرفرك』
-『** sug **/ لتقديم اقتراح』
-『** report **/ للابلاغ عن مشكله』
-『** للتقديم على ادارة او رتبة معينة /** تقديم』
-『** support **/سيرفر الدعم』
-『** contact **/ارسال اقتراح او لمراسلة صاحب البوت』
-`)
-message.author.send(`.
- **Game commands | اوامر الالعاب**
-『** rps **/ حجر ورقة مقص』
-『** speed **/ اسرع كتابة』
-『** quas **/ اسئلة عامة』
-『** نكت /** نكت 』
-『** لعبة فكك /** فكك』
-『** عواصم عشوائي/** عواصم』
-『** لعبة كت تويت /** كت تويت』
-『** roll <number> **/ قرعة』
-『** لو خيروك بطريقة حلوة /** لو خيروك』
-『** لعبة مريم /** مريم』
-『** فوائد ونصائح  /** هل تعلم』
-『** slots **/ للعبة سلوتس』
-『** xo <user> <user> **/ للعبة اكس او』
-『=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.』
-『**welcome** يتم الترحيب فى روم باسم』
-『** setwelcomer <text channel name> **لاختيار روم للترحيب』
-`)
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'help')) { //DiamondCodes - [ X_KillerYT ]
+    let pages = [`
+***__وصف عن البوت__***
+**
+:gem:  البوت فيه كثير ميزات حلوة و جميلة
+ ا:rocket: البوت يعمل قرابة 24 ساعة
+**
+        ***__General orders__***
+**
+『?serv /يعرض لك معلومات عن السيرفر』
+『?serv2 / يعرض لك معلومات عن السيرفر ( الكود الثاني ) للمعلومات』
+『?id / يعرض لك معلومات عنك』
+『?myroles / لرؤية جميع رتبك الشخصية بالسيرفر』
+『?id / يعرض لك معلومات عنك』
+『?link / لمعمل انفايت ( دعوة ) لشخص』
+『?inv / لدعوة البوت الى سيرفرك』
+『?support / سيرفر المساعدة』
+『?cmind / لكتابة اي شيء تقوله داخل صورة』
+『?servavatar / لرؤية صورة السيرفر』
+『?count / لرؤية عدد الاعضاء بالسيرفر』
+『?avatar / لرؤية صورة شخص 』
+『?bot-info / لرؤية معلومات عن البوت 』
+『?report / لرفع شكوى على عضو 』
+『?servers / لرؤية عدد السيرفرات التي داخل بها البوت 』
+『?myid / لمعرفة الايدي الخاص بك 』
+**
+  `
+,`
+        ***__Admin orders__***
+**
+『?clear / لحذف الشات 』
+『?mc / لقفل الشات  』
+『?unmc / لفتح الشات 』
+『?bc / لارسال رسالة لجميع اعضاء السيرفر 』
+『?kick / لطرد شخص من الدسكورد 』
+『?ban / لاعطاء شخص باند من الدسكورد 』
+『?mute / لاعطاء شخص ميوت 』
+『?unmute / لفك ميوت شخص 』
+『?ct / لانشاء روم كتابي 』
+『?cv / لانشاء روم صوتي 』
+『?rolebc / برود كاست للرتب 』
+**
+  `
+,`
+        ***__Games orders__***
+**
+『?لعبة صراحة / صراحة 』
+『?لعبة كت تويت / كت تويت 』
+『?لعبة لو خيروك / لو خيروك』
+『?rps / لعبة حجرة ورقة مقص 』
+『?اسئلة للعبة فورت نايت /  فورت نايت 』
+**
+   
+`]
+    let page = 1;
+ 
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+ 
+    message.author.sendEmbed(embed).then(msg => {
+ 
+        msg.react('◀').then( r => {
+            msg.react('▶')
+ 
+ 
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+ 
+ 
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+ 
+ 
+ 
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+     
+      page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
     }
-})
+});
 var attentions = {};
 var times = {
     "1⃣": "m",
